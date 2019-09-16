@@ -1,52 +1,49 @@
-# telecmi-webhooks
+# telecmi-live-event
 
-## Incoming Missed
+## Incoming waiting
 
 
 ```
 { 
   cmiuid: '127c1480-ce5d-480a-a593',
-  status: 'missed',
+  status: 'waiting',
   from: 1401003355,
+  name:'unknown',
   time: 1553763981000,
-  waitedsec: 143,
+  to:044989889899,
   direction:'inbound',
-  voicemail:true,
-  voicename:'15537387809818359948791.mp3'
-  team: 'DID' 
+  app_id:1111112
 }
 ```
 ## Incoming Answered
 
 ```
 { 
-    cmiuid: 'a59180ef-7a17-4d6f-9f62-b3d407',
-    user: '101_111xxxx',
-    status: 'answered',
-    to: 989xxxxx,
-    from: 989xxxxx,
-    direction:'inbound',
-    time: 1553758498059,
-    answeredsec: 7,
-    team: 'Enquiry_111xxxx',
-    record: true,
-    filename: '1553738780981835994879.mp3' 
+  cmiuid: '127c1480-ce5d-480a-a593',
+  status: 'answered',
+  from: 1401003355,
+  name:'unknown',
+  time: 1553763981001,
+  to:044989889899,
+  direction:'inbound',
+  app_id:1111112
 }
    
 ```
 
-## Outgoing Missed
+## Outgoing started
 
 
 ```
 { 
   cmiuid: '127c1480-ce5d-480a-a593',
-  status: 'missed',
-  from: 982xxxxxxx,
+  status: 'ringing',
+  from: 1401003355,
   time: 1553763981000,
-  waitedsec: 143,
   direction:'outbound',
   to:942xxxxxxx,
+  app_id:1111112,
+  parent_uid:'127c1480-ce5d-480a-a593',
   user:'101_1111113'
 }
 ```
@@ -54,16 +51,31 @@
 
 ```
 { 
-    cmiuid: 'a59180ef-7a17-4d6f-9f62-b3d407',
-    status: 'answered',
-    from: 989xxxxx,
-    time: 1553758498059,
-    answeredsec: 7,
-    direction:'outbound',
-    to:942xxxxxxx,
-    user:'101_1111113'
-    record: true,
-    filename: '1553738780981835994879.mp3' 
+   cmiuid: '127c1480-ce5d-480a-a593',
+  status: 'answered',
+  from: 1401003355,
+  time: 1553763981000,
+  direction:'outbound',
+  to:942xxxxxxx,
+  app_id:1111112,
+  parent_uid:'127c1480-ce5d-480a-a593',
+  user:'101_1111113' 
+}
+   
+```
+## Outgoing Hangup
+
+```
+{ 
+   cmiuid: '127c1480-ce5d-480a-a593',
+  status: 'hangup',
+  from: 1401003355,
+  time: 1553763981000,
+  direction:'outbound',
+  to:942xxxxxxx,
+  app_id:1111112,
+  parent_uid:'127c1480-ce5d-480a-a593',
+  user:'101_1111113' 
 }
    
 ```
