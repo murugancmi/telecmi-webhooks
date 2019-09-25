@@ -6,6 +6,7 @@
 ```
 { 
   cmiuid: '127c1480-ce5d-480a-a593',
+  type:'cdr',
   status: 'missed',
   from: 1401003355,
   time: 1553763981000,
@@ -23,6 +24,7 @@
     cmiuid: 'a59180ef-7a17-4d6f-9f62-b3d407',
     user: '101_111xxxx',
     status: 'answered',
+    type:'cdr',
     to: 989xxxxx,
     from: 989xxxxx,
     direction:'inbound',
@@ -42,6 +44,7 @@
 { 
   cmiuid: '127c1480-ce5d-480a-a593',
   status: 'missed',
+  type:'cdr',
   from: 982xxxxxxx,
   time: 1553763981000,
   waitedsec: 143,
@@ -56,6 +59,7 @@
 { 
     cmiuid: 'a59180ef-7a17-4d6f-9f62-b3d407',
     status: 'answered',
+    type:'cdr',
     from: 989xxxxx,
     time: 1553758498059,
     answeredsec: 7,
